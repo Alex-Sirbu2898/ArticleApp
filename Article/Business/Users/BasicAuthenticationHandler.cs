@@ -1,6 +1,4 @@
 ﻿using ArticleApp.Data.User.Repository;
-using Azure.Core;
-using Azure;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
@@ -37,7 +35,7 @@ public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSc
             }
         }
         Response.StatusCode = 401;
-        Response.Headers.Add("WWW-Authenticate", "Basic realm=\"joydipkanjilal.com\"");
+        Response.Headers.Add("WWW-Authenticate", "Basic realm=\"https://www.auchan.ro\"");
         return await Task.FromResult(AuthenticateResult.Fail("Invalid Authorization Header"));
     }
 }

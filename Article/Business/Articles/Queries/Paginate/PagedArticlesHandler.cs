@@ -10,11 +10,11 @@ namespace ArticleApp.Business.Articles.Queries.Paginate
         private readonly ApplicationDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public PagedArticlesHandler(ApplicationDbContext dbContext, IQueryService<Article> employeeQueryService, IMapper mapper)
+        public PagedArticlesHandler(ApplicationDbContext dbContext, IQueryService<Article> articleQueryService, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
-            _articleQueryService = employeeQueryService;
+            _articleQueryService = articleQueryService;
         }
 
         public async Task<PagedArticleResponse> Handle(PagedArticleQuery request, CancellationToken cancellationToken)

@@ -1,7 +1,5 @@
 ﻿using ArticleApp.Data;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ArticleApp.Business.Articles.Commands.Update

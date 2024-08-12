@@ -16,12 +16,12 @@ namespace ArticleApp.Business.Articles.Commands.Delete
 
         public async Task<int?> Handle(DeleteArticleCommand command, CancellationToken cancellationToken)
         {
-            var employee = await _applicationDbContext.Articles.SingleOrDefaultAsync(x => x.Id == command.Id, cancellationToken);
+            var article = await _applicationDbContext.Articles.SingleOrDefaultAsync(x => x.Id == command.Id, cancellationToken);
 
-            if (employee == null)
+            if (article == null)
                 return -1;
 
-            _applicationDbContext.Articles.Remove(employee);
+            _applicationDbContext.Articles.Remove(article);
             await _applicationDbContext.SaveChangesAsync();
 
             return 204;

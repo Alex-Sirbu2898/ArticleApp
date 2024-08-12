@@ -1,5 +1,4 @@
-﻿using ArticleApp.Business.Articles.Commands.Create;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace ArticleApp.Business.Articles.Commands.Create.Validation
 {

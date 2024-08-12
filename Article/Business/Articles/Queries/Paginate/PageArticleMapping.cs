@@ -1,5 +1,4 @@
-﻿using ArticleApp.Business.Articles.Queries.GetAll;
-using ArticleApp.Data;
+﻿using ArticleApp.Data;
 using AutoMapper;
 
 namespace ArticleApp.Business.Articles.Queries.Paginate
