@@ -81,6 +81,7 @@ namespace ArticleApp.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> Delete(long id, CancellationToken cancellationToken)
         {
             if(id <= 0)
